@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CINC.</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/contact.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <a href="/"><span class="logo">CINC.</span></a>
+    <div class="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/about-us.html">About us</a></li>
+        <li><a class="activeHref" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="contact">
+    <span>Get In Touch.</span>
+    <p>Contact us or visit us for a cup of coffee!</p>
+    <div class="main-contact">
+      <div class="info-contacts">
+        <div><i class="fas fa-phone"></i><a href="tel:+17159357894">715-935-7894</a></div>
+        <div><i class="far fa-paper-plane"></i><a href="mailto:cinc@example.com">cinc@example.com</a></div>
+        <div><i class="fas fa-map-marker-alt"></i><a target="_blank" href="https://www.google.com/maps/place/710+S+Sepulveda+Blvd,+El+Segundo,+CA+90245,+USA/@33.9062546,-118.3961286,18.18z/data=!3m1!5s0x80c2b3ffee9cff6b:0x57bb9a6a746aa8fb!4m8!1m2!2m1!1s710+S+Sepulveda+Blvd,+El+Segundo,+CA+90245,+United+States!3m4!1s0x80c2b3ffd1badad5:0xaaa3231d9461d9c2!8m2!3d33.906502!4d-118.3954065"> 720 S N Pacific Coast Hwy, <br> El Segundo, CA 90245, United States</a></div>
+      </div>
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="rights">© CINC 2020 <br>All Rights Reserved</div>
+    <div id="email"><i class="far fa-paper-plane"></i> <a href="mailto:cinc@example.com">cinc@example.com</a></div>
+  </footer>
+
+  <script>
+  function initMap() {
+    const markerMap = { lat: 33.906477, lng: -118.394976 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 12,
+      center: markerMap,
+    });
+    const marker = new google.maps.Marker({
+      position: markerMap,
+      map: map,
+    });
+  }
+  </script>
+  <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bWQ_NhIlO0zVq2Fso2bi9NufMQmnEJc&callback=initMap">
+  </script>
+</body>
+</html>
